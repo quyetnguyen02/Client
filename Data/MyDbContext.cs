@@ -13,7 +13,8 @@ namespace ClientNews.Data
         {
         }
 
-        public DbSet<Sourses> Sourses { get; set; }
+        public DbSet<Sourse> Sourses { get; set; }
         public DbSet<Article> Articles { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }
