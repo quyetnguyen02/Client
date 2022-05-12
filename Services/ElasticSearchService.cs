@@ -11,13 +11,13 @@ namespace ClientNews.Services
     public class ElasticSearchService
     {
         private static ElasticClient searchClient;
-        private static string IndexName = "quyet";
+        private static string IndexName = "articles";
         private static string ElasticSearchServer = "http://localhost:9200";
-        private static string DefaultIndexName = "quyet";
+        private static string DefaultIndexName = "example-index";
         private static string ElasticSearchUser = "elastic";
-        private static string ElasticSearchPassword = "FDhMkMvuLi082UTlnQVjT1Jd";
-        private static string CloudId = "quyet:dXMtY2VudHJhbDEuZ2NwLmNsb3VkLmVzLmlvJDc1MGNhY2IxZGJhNzQwYzZiOTA0ZDFhODRlY2M1N2RmJDM0YjZkZDYzYzdlMzRmNjFiMjE0Yzc2MDZkMWVkZGMw";
-
+        private static string ElasticSearchPassword = "8QAC1kklkbFkyVRR0ZxDh9tA";
+        private static string CloudId = "CrawlNews:YXNpYS1zb3V0aGVhc3QxLmdjcC5lbGFzdGljLWNsb3VkLmNvbSQ4NTNmYzhhMjc4YmM0OWJhYTBmMTBhOTY0YWYyNTViMCQ4NWFmYjEwMTNjNGM0MmQ0ODJmMDZkMjUxZDQ3N2ViMQ==";
+       
         public static ElasticClient GetInstance()
         {
             if (searchClient == null)

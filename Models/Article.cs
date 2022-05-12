@@ -9,6 +9,7 @@ namespace ClientNews.Models
 {
     public class Article
     {
+        [Key]
         public int Id { get; set; }
         public string UrlSource { get; set; }
         public string Title { get; set; }
@@ -17,6 +18,8 @@ namespace ClientNews.Models
         public string Content { get; set; }
         public string Category { get; set; }
         public long CreatedAt { get; set; }
-        public int SourseId { get; set; }
+        public int SourceId { get; set; }
+        [ForeignKey("SourceId")]
+        public virtual Sourse Source { get; set; } //Link Bài viết này có nguồn từ trang nào VD lấy từ trang VN express
     }
 }

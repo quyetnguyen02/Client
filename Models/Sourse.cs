@@ -8,9 +8,11 @@ using System.Web;
 namespace ClientNews.Models
 {
     public class Sourse
-    {    
+    {
+        [Key]
         public int Id { get; set; }
         public string Url { get; set; }
+        public string Tag { get; set; }
         public string SelectorSubUrl { get; set; }
         public string SubUrl { get; set; }
         public string SelectorTitle { get; set; }
@@ -19,5 +21,10 @@ namespace ClientNews.Models
         public string SelectorContent { get; set; }
         public int CategoryId { get; set; }
         public int ArticleId { get; set; }
+
+        [ForeignKey("CategoryId")]
+        public virtual Category Category { get; set; }
+        [ForeignKey("ArticleId")]
+        public virtual ICollection<Article> ListArticle { get; set; }
     }
 }
